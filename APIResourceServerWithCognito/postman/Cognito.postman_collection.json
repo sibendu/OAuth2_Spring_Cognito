@@ -35,12 +35,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "lq38ctimv78794fgrls42c2hf0gav4csolsl17gl505ob8nnegm",
+							"value": "<client-secret>",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "7rpa5pnvc9rpdfjb0gbktqe3ld",
+							"value": "<client-id>",
 							"type": "string"
 						}
 					]

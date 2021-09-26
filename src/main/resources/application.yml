@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: https://onestore.auth.eu-west-1.amazoncognito.com/oauth2/userInfo
+      tokenInfoUri: https://onestore.auth.eu-west-1.amazoncognito.com/oauth2/token
+      jwk:
+        key-set-uri: https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_9rFYbKf9k/.well-known/jwks.json
+        
+        

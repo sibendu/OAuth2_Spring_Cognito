@@ -1,0 +1,38 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.4'
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+group = 'sd.example'
+version = '1.0.0'
+description = 'OAuth2 Resource Server with Spring Security and AWS Cognito'
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.5.2'
+    
+    implementation 'org.springdoc:springdoc-openapi-ui:1.5.10'
+    implementation 'org.springdoc:springdoc-openapi-security:1.5.10'
+    // https://mvnrepository.com/artifact/io.swagger/swagger-annotations
+	implementation 'io.swagger:swagger-annotations:1.6.2'//2.0.0-rc2' //''
+    // https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter
+	//implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

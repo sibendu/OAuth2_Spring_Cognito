@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.4'
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+group = 'sd.example'
+version = '1.0.0'
+description = 'OAuth2 Authorization Server with Spring'
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.security:spring-security-oauth2-authorization-server:0.2.0'
+}
+
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
